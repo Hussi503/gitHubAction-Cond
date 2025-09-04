@@ -68,10 +68,7 @@ jobs:
           path: dist
   deploy:
     needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: calling workflow
-        uses: ./.github/workflows/reusuable.yaml
+    uses: ./.github/workflows/reusuable.yaml
   report:
     needs: [lint, test]
     if: failure()
