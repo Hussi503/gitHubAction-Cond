@@ -1,9 +1,9 @@
-- name: Matrix CI
-  on: push
-  jobs:
-    build:
-      strategy:
-        matrix:
+name: Matrix Demo
+on: push
+jobs:
+  build:
+    strategy:
+      matrix:
           node_version: [16, 18, 20]
           operating_system: [ubuntu-latest, windows-latest, macos-latest] 
       runs-on: ${{ matrix.operating_system }}
