@@ -12,9 +12,9 @@ on:
      description: 'Result of the deployment'
      value: ${{ jobs.deploy.outputs.outcome }}'
 jobs:
-  outputs:
-    outcome: ${{ steps.set-output.outputs.step-output}}
   deploy:
+    outputs:
+     outcome: ${{ steps.set-output.outputs.step-output}}
     runs-on: ubuntu-latest
     steps:
       - name: Get build artifacts
