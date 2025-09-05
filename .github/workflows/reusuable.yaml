@@ -27,4 +27,4 @@ jobs:
         run: echo "This is a reusable workflow"
       - name: Set Result Output
         id: set-output
-        run: echo "step-result=success" >> $GITHUB_OUTPUT
+        run: echo "step-output=success" >> $GITHUB_OUTPUT
